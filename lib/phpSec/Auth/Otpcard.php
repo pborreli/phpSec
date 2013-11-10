@@ -12,7 +12,7 @@ use phpSec\Crypt\Rand;
 use phpSec\Common\Core;
 
 /**
- * Providees pre shared one-time-password functionality. Experimental.
+ * Provides pre shared one-time-password functionality. Experimental.
  * @package phpSec_Experimental
  */
 class Otpcard {
@@ -50,7 +50,7 @@ class Otpcard {
    * @param string $otp
    *   The password provided by the user.
    *
-   * @return bolean
+   * @return boolean
    */
   public static function validate($cardId, $selected, $otp) {
     $card = self::load($cardId);
@@ -125,7 +125,7 @@ class Otpcard {
    *   Array containing a already hashed card.
    *
    * @return mixed
-   *   Returns card arryar on success and false on error.
+   *   Returns card array on success and false on error.
    */
   private static function save($card) {
     $card = self::hash($card);
@@ -138,7 +138,7 @@ class Otpcard {
   }
 
   /**
-   * Prepeare the password card for saving.
+   * Prepare the password card for saving.
    *
    * @param array $card
    *   Array containing the card data to hash.

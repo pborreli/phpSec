@@ -12,7 +12,7 @@ use \phpSec\Common\Core;
 
 
 /**
- * Provides us with a simple cahce engine.
+ * Provides us with a simple cache engine.
  *
  * Only intended for use by phpSec, but feel free to use it if you want.
  * @package phpSec
@@ -116,17 +116,17 @@ class Cache {
       /* Skipping GC this time. */
       return false;
     }
-    $cahceIds = $this->store->listIds('cache');
-    foreach($cahceIds as $cahceId) {
+    $cacheIds = $this->store->listIds('cache');
+    foreach($cacheIds as $cacheId) {
       try {
-        $data = $this->store->read('cache', $cahceId);
+        $data = $this->store->read('cache', $cacheId);
       } catch (\phpSec\Exception $e) {
         /* Skip this. */
         continue;
       }
 
       if($data['ttl'] < time()) {
-        $this->store->delete('cache', $cahceId);
+        $this->store->delete('cache', $cacheId);
       }
     }
     return true;

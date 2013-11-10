@@ -41,7 +41,7 @@ class Crypto {
    * array(
    *   'cdata' => 'Encrypted data, Base 64 encoded',
    *   'iv'    => 'Base64 encoded IV',
-   *   'algo'  => 'Algorythm used',
+   *   'algo'  => 'Algorithm used',
    *   'mode'  => 'Mode used',
    *   'mac'   => 'Message Authentication Code'
    * )
@@ -77,7 +77,7 @@ class Crypto {
         return false;
       }
     } else {
-      /* No spsecific size is needed. */
+      /* No specific size is needed. */
       if($keySize == 0 || $keySize > mcrypt_enc_get_key_size($td)) {
         throw new \phpSec\Exception\InvalidKeySpecException('Key is out of range. Should be between  1 and ' . mcrypt_enc_get_key_size($td).' bytes.');
         return false;
@@ -91,10 +91,10 @@ class Crypto {
     /* Init mcrypt. */
     mcrypt_generic_init($td, $key, $iv);
 
-    /* Prepeare the array with data. */
+    /* Prepare the array with data. */
     $serializedData = serialize($data);
 
-    /* Enable padding of data if block cipher moode. */
+    /* Enable padding of data if block cipher mode. */
     if (mcrypt_module_is_block_algorithm_mode($this->_mode) === true)	{
     	$this->_padding = true;
     }
@@ -122,7 +122,7 @@ class Crypto {
    *
    * @param string $data
    *   JSON string containing the encrypted data and meta information in the
-   *   excact format as returned by encrypt().
+   *   exact format as returned by encrypt().
    *
    * @return mixed
    *   Decrypted data in it's original form.

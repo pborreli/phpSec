@@ -19,7 +19,7 @@
 class Core extends \Pimple {
 
   /**
-   * phpSec version consant.
+   * phpSec version constant.
    */
   const VERSION = '0.6.1';
 
@@ -154,7 +154,7 @@ class Core extends \Pimple {
         if(is_array($callbackArray) && isset($callbackArray['callback'])) {
           /* We have a callback. */
 
-          /* Replace %val with the acutal value of the key. */
+          /* Replace %val with the actual value of the key. */
           $callbackArray['params'] = str_replace('%val', $array[$key], $callbackArray['params']);
 
           if(call_user_func_array($callbackArray['callback'], $callbackArray['params']) !== $callbackArray['match']) {

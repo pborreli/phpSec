@@ -74,7 +74,7 @@ class Exec {
       $out['STDOUT'] = stream_get_contents($pipes[self::STDOUT]);
       $out['STDERR'] = stream_get_contents($pipes[self::STDERR]);
 
-      /* Close STDOUT and STDERR to aviod potential deadlocks. */
+      /* Close STDOUT and STDERR to avoid potential deadlocks. */
       fclose($pipes[self::STDOUT]);
       fclose($pipes[self::STDERR]);
 

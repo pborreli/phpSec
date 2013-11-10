@@ -23,7 +23,7 @@ class Filter {
    * XSS text filter. Returns a string that is safe to use on the page.
    *
    * There are three types of variables:
-   * %variables: stip mode of phpsec::f() is used.
+   * %variables: strip mode of phpsec::f() is used.
    * !variables: escapeAll mode of phpsec::f() is used.
    * @variables: escape mode of phpsec::f() is used.
    * &variables: url mode of phpsec::f() is used.
@@ -38,7 +38,7 @@ class Filter {
    *
    * @param mixed $args
    *   An associative array containing data to filter.
-   *   The array keys should be preceeded with %, ! or @ defining what filter
+   *   The array keys should be preceded with %, ! or @ defining what filter
    *   to apply.
    */
   public function t($str, $args) {

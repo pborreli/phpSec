@@ -83,7 +83,7 @@ class Otp {
   /**
    * Validate a one-time-password.
    *
-   * @param strgin $otp
+   * @param string $otp
    *   OTP supplied by user.
    *
    * @param string $action

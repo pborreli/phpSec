@@ -50,7 +50,7 @@ class Token {
     $cache = $this->psl['cache'];
 
     $token = $rand->str(32, $this->_charset);
-    /* Save the token to the cahce. */
+    /* Save the token to the cache. */
     $cache->cacheSet('token-'.$name, $token, $ttl);
     return $token;
   }
@@ -75,7 +75,7 @@ class Token {
     $cacheToken = $cache->cacheGet('token-'.$name);
     /* Check if the provided token matches the token in the cache. */
     if($cacheToken == $token) {
-      /* Remove the token from the cahche so it can't be reused. */
+      /* Remove the token from the cache so it can't be reused. */
       $cache->cacheRem('token-'.$name);
       return true;
     }

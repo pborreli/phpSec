@@ -97,7 +97,7 @@ class Url {
    * Get the request from a string to create a security token from.
    *
    * @param string $url
-   *   URL to get request striong from.
+   *   URL to get request string from.
    *
    * @return string
    *   Request string.

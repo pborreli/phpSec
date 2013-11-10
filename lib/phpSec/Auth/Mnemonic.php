@@ -20,9 +20,9 @@
 class Mnemonic {
 
   /**
-   * Words to generate phassphrases from.
+   * Words to generate passphrases from.
    *
-   * If you change this, you will loss compability with mnemonic.js
+   * If you change this, you will loss compatibility with mnemonic.js
    * @see https://github.com/ggozad/mnemonic.js
    */
   public $dictionary = array('like','just','love','know','never','want','time',

@@ -40,7 +40,7 @@ class Pdo extends Store {
       return false;
     }
 
-    /* Cool, we connected to the databse with no problems.
+    /* Cool, we connected to the database with no problems.
      * Now let's try to find the table we want. */
     $this->table = $parts['table'];
     /* Got it!! No just kidding. */
@@ -93,7 +93,7 @@ class Pdo extends Store {
      * don't expect people to have nothing else than hard coded table names there is no
      * proper escape function for table/column names. We will do as suggested here
      * http://stackoverflow.com/questions/1542627/escaping-field-names-in-pdo-statements
-     * by bobince and dissallow backquote, backslash and the nul character.
+     * by bobince and disallow backquote, backslash and the nul character.
      * We will only do this here since we will verify the existence of the table later.
      * Oh.. I almost forgot. This fix is mySQL only! */
     $sth = $this->dbh->prepare(
@@ -120,14 +120,14 @@ class Pdo extends Store {
       }
     }
 
-    /* Cool. No wait.. It was cool 10 lines ago. Supercool! We got this far. All is good. Go pary! */
+    /* Cool. No wait.. It was cool 10 lines ago. Supercool! We got this far. All is good. Go party! */
     return true;
   }
 
   public function read($type, $id) {
     $crypto = $this->psl['crypt/crypto'];
 
-    /* The first part is prettu basic. Get stuff from databse. */
+    /* The first part is pretty basic. Get stuff from database. */
     $sth = $this->dbh->prepare(
       'SELECT * FROM '.$this->table.' WHERE type = :type AND id = :id LIMIT 1'
     );
@@ -162,7 +162,7 @@ class Pdo extends Store {
     /* Delete existing data first, to prevent a huge database. */
     $this->delete($type, $id);
 
-    /* Prepeare query. */
+    /* Prepare query. */
     $sth = $this->dbh->prepare(
       'INSERT INTO '.$this->table.' (`id`, `mac`, `time`, `type`, `data`)' .
       'VALUES(:id, :mac, :time, :type, :data)'

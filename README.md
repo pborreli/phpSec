@@ -20,7 +20,7 @@ Features
 
 Installing
 ---------------
-phpSec is now a PSR-0 compatible library. this means that it can easilly be installed and loaded using [Composer](http://getcomposer.org/doc/00-intro.md).
+phpSec is now a PSR-0 compatible library. this means that it can easily be installed and loaded using [Composer](http://getcomposer.org/doc/00-intro.md).
 You can also install phpSec manually, or using Git.
 
 ### Installing using [Composer](http://getcomposer.org/doc/00-intro.md)
@@ -39,7 +39,7 @@ phpSec can then be loaded using the Composer autoloader.
 `require 'vendor/autoload.php';`
 
 ### Installing manually/Git
-Download, checkout or peferrably add phpSec as a Git submodule.
+Download, checkout or preferably add phpSec as a Git submodule.
 To add an autoloader to your project there is [one example here](http://gist.github.com/221634).
 This can be initialized like this:
 
@@ -53,7 +53,7 @@ $classLoader->register();
 If you already have a PSR-0 compatible autoloader for your project there is no need to add another.
 All you have to do is to register the *phpSec* namespace to the *phpSec/lib* folder.
 
-For documentation on how to use the various phpSec functionality, take alook at the [phpsec/doc](https://github.com/phpsec/doc) repository. 
+For documentation on how to use the various phpSec functionality, take a look at the [phpsec/doc](https://github.com/phpsec/doc) repository.
 
 System requirements
 -------------------

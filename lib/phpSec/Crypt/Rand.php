@@ -33,7 +33,7 @@ class Rand {
       }
     }
 
-    /* Either we dont have the OpenSSL library or the data returned was not
+    /* Either we don't have the OpenSSL library or the data returned was not
      * considered secure. Fall back on this less secure code. */
     if(function_exists('mcrypt_create_iv')) {
       $rnd = mcrypt_create_iv($len, MCRYPT_DEV_URANDOM);

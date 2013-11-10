@@ -252,7 +252,7 @@ class Yubikey {
       return false;
     }
 
-    /* Check for printable charcters (no whitespace). */
+    /* Check for printable characters (no whitespace). */
     return ctype_graph($otp);
   }
 
